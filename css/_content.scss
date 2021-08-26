@@ -5,7 +5,7 @@ main {
   max-width: $content-mw;
   margin: auto;
   padding-bottom: calc(#{$footer-h} + 5vh);
-  :second-child {
+  :first-child {
     padding-top: $header-h;
   }
 }
