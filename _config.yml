@@ -31,3 +31,5 @@ include: ['units']
 markdown: kramdown
 permalink: pretty
 future: true
+sass:
+  sass_dir: css

@@ -1,0 +1,25 @@
+@import "variables";
+
+footer {
+
+  width: 100%;
+  height: $footer-h;
+
+  background-color: $bg-c;
+
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-right: 5vw;
+
+  a {
+    color: $text-c;
+    &:hover {
+      color: $accent-c;
+    }
+    margin-left: 2vw;
+  }
+}

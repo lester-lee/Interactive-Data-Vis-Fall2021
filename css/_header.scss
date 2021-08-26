@@ -1,0 +1,16 @@
+@import "variables";
+header {
+  position: fixed;
+  width: 100%;
+  height: $header-h;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  margin-left: 10vw;
+
+  background-color: $bg-c;
+  img {
+    height: 100%;
+    max-width: 100px;
+    max-height: 100px;
+  }
+}

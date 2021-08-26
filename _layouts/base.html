@@ -2,15 +2,16 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/base.css" />
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400i" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/style.css" />
+  <link href='https://fonts.googleapis.com/css?family=Vollkorn|Playfair+Display' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div class="Main">
+  {% include header.html %}
+  <main>
     {{content}}
-  </div>
+  </main>
+  {% include footer.html %}
 </body>
 </html>
