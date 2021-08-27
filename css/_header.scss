@@ -10,6 +10,10 @@ header {
   margin-left: 10vw;
 
   background-color: $bg-c;
+  transition: top .5s;
+  transition: margin-left .5s;
+  transition: padding .5s;
+
   img {
     height: 100%;
     max-width: 100px;
