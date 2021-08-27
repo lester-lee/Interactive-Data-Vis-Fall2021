@@ -33,3 +33,5 @@ permalink: pretty
 future: true
 sass:
   sass_dir: css
+
+exclude: ['Gemfile', 'Gemfile.lock', 'LICENSE', 'README.md', 'CNAME']

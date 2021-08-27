@@ -17,9 +17,14 @@ footer {
 
   a {
     color: $text-c;
+    text-decoration: underline;
     &:hover {
       color: $accent-c;
     }
-    margin-left: 2vw;
+  }
+  nav {
+    a, span {
+      margin-left: 2vw;
+    }
   }
 }

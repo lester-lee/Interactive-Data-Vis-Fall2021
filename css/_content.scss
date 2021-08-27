@@ -5,7 +5,18 @@ main {
   max-width: $content-mw;
   margin: auto;
   padding-bottom: calc(#{$footer-h} + 5vh);
-  :first-child {
+  > :first-child {
     padding-top: $header-h;
+  }
+
+  li {
+    margin: .5ex 0;
+  }
+}
+
+article {
+  li {
+    list-style: disc;
+    margin-left: 5%;
   }
 }

@@ -23,16 +23,21 @@ body {
 a {
   text-decoration: none;
   color: $accent-c;
+  &:hover {
+    color: $hover-c;
+    text-decoration: underline;
+  }
 }
 
 p {
   margin-bottom: 1.5ex;
+  line-height: 1.2;
 }
 
 @for $i from 1 through 6 {
   h#{$i} {
     font-family: $heading-f;
-    font-size: #{25px - $i};
+    font-size: #{26px - $i*2};
     font-weight: bold;
     margin: 1ex 0;
   }
