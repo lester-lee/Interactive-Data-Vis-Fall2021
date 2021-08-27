@@ -1,7 +1,6 @@
 @import "variables";
 
 footer {
-
   width: 100%;
   height: $footer-h;
 
@@ -9,22 +8,24 @@ footer {
 
   position: fixed;
   bottom: 0;
+  padding-right: 5vw;
 
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: end;
   align-items: center;
-  padding-right: 5vw;
+
+  .Footer-Text {
+    .--desktop {
+      display: none;
+    }
+  }
 
   a {
     color: $text-c;
     text-decoration: underline;
+    margin-left: 2vw;
     &:hover {
       color: $accent-c;
-    }
-  }
-  nav {
-    a, span {
-      margin-left: 2vw;
     }
   }
 }

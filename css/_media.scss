@@ -1,4 +1,17 @@
-@media screen and (min-width: 1280px) {
+@media (min-width: 600px) {
+  footer {
+    .Footer-Text {
+      .--desktop {
+        display: block;
+      }
+      .--mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
   header {
     top: 10vh;
     margin-left: 15vw;
