@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="{{ site.baseurl }}/css/style.css" />
-  <link href='https://fonts.googleapis.com/css?family=Vollkorn|Playfair+Display' rel='stylesheet' type='text/css'>
-</head>
-<body>
-  {% include header.html %}
-  <main>
-    {{content}}
-  </main>
-  {% include footer.html %}
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ site.baseurl }}/css/style.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Vollkorn|Playfair+Display|Ubuntu+Mono"
+    />
+  </head>
+  <body>
+    {% include header.html %}
+    <main>{{content}}</main>
+    {% include footer.html %}
+  </body>
 </html>

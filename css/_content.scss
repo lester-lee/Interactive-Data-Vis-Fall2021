@@ -16,7 +16,33 @@ main {
   }
 }
 
-article {
-  li {
+table {
+  width: 100%;
+  text-align: center;
+  th, td {
+    border: 0 solid $text-c;
+    border-width: 0 1px;
+    border-collapse: collapse;
+    padding: .5vh 1vw;
   }
+  caption {
+    font-family: "Playfair Display";
+    margin: .5vh 0;
+    font-size: .9em;
+  }
+  thead {
+    background-color: #888;
+    color: $bg-c;
+  }
+  tbody {
+    font-family: "Ubuntu Mono";
+    border-bottom: 1px solid $text-c;
+    tr:nth-child(2n+1) {
+      background-color: #eee;
+    }
+  }
+}
+
+figure {
+  overflow-x: auto;
 }

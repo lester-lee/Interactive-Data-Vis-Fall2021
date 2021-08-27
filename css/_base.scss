@@ -30,15 +30,20 @@ a {
 }
 
 p {
-  margin: .75ex 0;
+  margin: 0.75ex 0;
   line-height: 1.2;
 }
 
 @for $i from 1 through 6 {
   h#{$i} {
     font-family: $heading-f;
-    font-size: #{26px - $i*2};
+    font-size: #{26px - $i * 2};
     font-weight: bold;
     margin: 1ex 0;
   }
+}
+
+code {
+  font-family: "Ubuntu Mono";
+  color: #{$text-c}cc;
 }
