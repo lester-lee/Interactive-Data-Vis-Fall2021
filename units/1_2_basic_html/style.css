@@ -1,19 +1,7 @@
-body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
-  padding: 1em;
+.--penguin thead{
+  background-color: lightcoral;
 }
 
-h1 {
-  font-size: 3em;
-  margin: 0.25em 0;
-}
-
-h3 {
-  font-size: 2em;
-  margin: 0.25em 0;
-}
-
-p {
-  font-size: 1em;
+.--penguin tbody tr:nth-child(2n+1) {
+  background-color: lavender;
 }
