@@ -21,11 +21,9 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: $accent-c;
   &:hover {
     color: $hover-c;
-    text-decoration: underline;
   }
 }
 
@@ -44,6 +42,6 @@ p {
 }
 
 code {
-  font-family: "Ubuntu Mono";
+  font-family: $mono-f;
   color: #{$text-c}cc;
 }

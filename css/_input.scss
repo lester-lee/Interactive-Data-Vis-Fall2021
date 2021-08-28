@@ -1,0 +1,31 @@
+@import "variables";
+
+input[type="text"] {
+  border: 0;
+  border-bottom: 1px solid $accent-c;
+
+  color: $accent-c;
+  font-family: $text-f;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+button {
+  border: 1px solid $accent-c;
+  background-color: $bg-c;
+
+  font-family: $mono-f;
+  color: $accent-c;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $accent-c;
+    color: $bg-c;
+  }
+
+  &:active {
+    background-color: $hover-c;
+  }
+}

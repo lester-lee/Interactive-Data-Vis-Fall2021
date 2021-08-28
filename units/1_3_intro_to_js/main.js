@@ -1,24 +1,23 @@
-const $name_input = document.getElementById("Name-input");
-const $counter_input = document.getElementById("Counter-input");
-const $name_text = document.getElementById("Name-text");
-const $counter_text = document.getElementById("Counter-text");
+const $nameInput = document.getElementById("Name-input");
+const $counterInput = document.getElementById("Counter-input");
+const $nameText = document.getElementById("Name-text");
+const $counterText = document.getElementById("Counter-text");
 
 /**
- * Update the name whenever
- * user types in the text box
+ * Update the name whenever user types in the text box
  */
 function updateName() {
-  $name_text.innerText = $name_input.value;
+  const newText = $nameInput.value || "???";
+  $nameText.innerText = newText;
 }
-$name_input.oninput = updateName;
+$nameInput.oninput = updateName;
 
 /**
- * Increment the counter by 1 whenever
- * user clicks the button.
+ * Increment the counter by 1 whenever user clicks the button.
  */
 let count = 0;
 function updateCount() {
   count++;
-  $counter_text.innerText = count;
+  $counterText.innerText = count;
 }
-$counter_input.onclick = updateCount;
+$counterInput.onclick = updateCount;
