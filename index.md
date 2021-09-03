@@ -12,7 +12,6 @@ Hi! I'm [Lester Lee](https://www.lester-lee.com), and this website hosts my work
 ## Links
 Below are links to my assignments and write-ups.
   - [Assignments]({{site.baseurl}}/posts)
-  - [Notes]({{site.baseurl}}/notes)
   - [Github](https://github.com/lester-lee/Interactive-Data-Vis-Fall2021)
 
 I will update this home page as the semester continues.
