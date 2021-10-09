@@ -1,5 +1,6 @@
 ---
 layout: base
+includeStyle: true
 ---
 # Section 2 | Quantities and Amounts
 
