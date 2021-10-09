@@ -15,4 +15,6 @@ I again had a lot of difficulty with positioning the text, especially the rotate
 
 I used `css` to make the labels appear on hover, but it's not ideal right now because they appear under other data points and can be hard to read. Hopefully as I continue to work with d3 I figure out better ways of showing data points!
 
+In terms of learning something about the dataset, it doesn't seem like there's a clear relationship between resting blood pressure or cholesterol; these measures also don't seem to have a clear relationship with heart disease.
+
 <script src="main.js"></script>
