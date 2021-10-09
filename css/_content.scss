@@ -44,16 +44,15 @@ table {
 }
 
 figure {
-  //overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  svg {
+    font-family: $mono-f;
+  }
 }
 
 figcaption {
   border-top: 1px solid $text-c;
   padding-top: 3px;
   text-align: center;
-}
-
-.Chart {
-  width: 100%;
-  min-height: 20vh;
 }

@@ -10,15 +10,10 @@ The horizontal bar chart above displays data on the number of squirrels spotted 
 </figure>
 
 <br>
-The figure above uses `svg` elements to create the bars, but it was a bit awkward / tedious to actually position all the bars and labels. I ended up using a lot of magic numbers, and it seems like it would take a lot more fiddling to make the chart responsive. This may be due to my inexperience, but I'm going to try recreating the chart without `svg` elements below so that I can compare.
+The figure above uses `svg` elements to create the bars, but it was a bit awkward / tedious to actually position the text and axis labels. I had to dynamically calculate the width/heights of the generated elements in order to properly space everything, and it took a lot of fiddling to get the chart labels showing up correctly for smaller screens.
 
-<br>
+I also ran into some trouble with setting the x scale correctly since I had to take the calculated margins into account. At first, the bars did not seem to be scaling correctly, but then I realized that I was starting the range at the calculated margin instead of at 0.
 
-<figure id="chartContainer" class="ChartContainer">
-<figcaption>
-The horizontal bar chart above displays data on the number of squirrels spotted doing particular activities.
-</figcaption>
-</figure>
+I'm hoping that this will feel more intuitive as I get more practice!
 
-<script src="{{site.baseurl}}/lib/d3.js"></script>
 <script src="main.js"></script>
