@@ -1,8 +1,13 @@
 ---
 layout: base
 ---
-# Section 2 | Distributions
+# Section 2.2 | Distributions
+<figure id="HeartViz">
+<figcaption>
+Scatterplot with resting blood pressure on the X axis against cholesterol on the Y axis.
+</figcaption>
+</figure>
 
-<div id="container"></div>
-<script src="{{site.baseurl}}/lib/d3.js"></script>
-<script src="notes.js"></script>
+I used a [heart failure prediction dataset from Kaggle](https://www.kaggle.com/fedesoriano/heart-failure-prediction) for this assignment.
+
+<script src="main.js"></script>

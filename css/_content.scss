@@ -47,6 +47,7 @@ figure {
   overflow-x: auto;
   overflow-y: hidden;
   svg {
+    min-width: 100%;
     font-family: $mono-f;
   }
 }

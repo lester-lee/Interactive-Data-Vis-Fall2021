@@ -13,12 +13,8 @@ d3.csv("../../data/squirrelActivities.csv", d3.autoType).then((data) => {
   const container = d3
     .select("#svgChart")
     .insert("svg", ":first-child")
-    .style("min-width", "100%");
 
-  // Get computed properties of the svg
-  const containerProperties = container.node().getBoundingClientRect();
-  const WIDTH = containerProperties.width;
-  const HEIGHT = containerProperties.height;
+  const WIDTH, HEIGHT = getDimensions(container);
 
   // Calculate horizontal margins via y-axis
   const yScale = d3

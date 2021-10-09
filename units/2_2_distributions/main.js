@@ -5,12 +5,14 @@
 //   radius = ;
 
 /* LOAD DATA */
-d3.json("[PATH_TO_YOUR_DATA]", d3.autoType)
+d3.csv("../../data/heart.csv", d3.autoType)
   .then(data => {
-    console.log(data)
+    console.log('data :>> ', data);
 
-    /* SCALES */
+    const container = d3.select("#HeartViz")
+      .insert("svg", ":first-child")
+
+    const WIDTH, HEIGHT = getDimensions(container);
     
-    /* HTML ELEMENTS */
-    
+
   });

@@ -2,7 +2,7 @@
 layout: base
 includeStyle: true
 ---
-# Section 2 | Quantities and Amounts
+# Section 2.1 | Quantities and Amounts
 
 <figure id="svgChart">
 <figcaption>
