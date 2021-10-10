@@ -24,7 +24,7 @@ d3.csv("../../data/netflixByYear.csv", (d) => {
   };
 
   //-----------------------------
-  // Scales and Lines
+  // Scales
   //-----------------------------
   const xScale = d3
     .scaleTime()
@@ -38,6 +38,10 @@ d3.csv("../../data/netflixByYear.csv", (d) => {
     .range([HEIGHT - MARGIN.BOTTOM, MARGIN.TOP])
     .nice();
 
+  //-----------------------------
+  // Lines
+  //-----------------------------
+
   /**
    * Takes a given key and returns a d3 line generator
    */
@@ -48,37 +52,61 @@ d3.csv("../../data/netflixByYear.csv", (d) => {
       .y((d) => yScale(d[key]));
   }
 
-  const meanLine = generateLine("meanRating");
-  const minLine = generateLine("minRating");
-  const maxLine = generateLine("maxRating");
+  const keys = ["meanRating", "minRating", "maxRating"];
+  const [meanLine, minLine, maxLine] = keys.map(generateLine);
 
   //-----------------------------
-  // Stacks
+  // Areas
   //-----------------------------
-  const stack = d3.stack().keys(["minRating", "meanRating", "maxRating"])(data);
-  console.log('stack :>> ', stack);
+  const aboveMeanArea = d3
+    .area()
+    .x(meanLine.x())
+    .y0(meanLine.y())
+    .y1(maxLine.y());
+
+  const belowMeanArea = d3
+    .area()
+    .x(meanLine.x())
+    .y0(minLine.y())
+    .y1(meanLine.y());
 
   //-----------------------------
   // Rendering
   //-----------------------------
-  /**
-   * Renders a line given stroke color
-   */
-  function renderLine(cls, strokeColor, lineGen, strokeWidth = 1) {
-    return container
+  function renderLine(
+    cls,
+    strokeColor,
+    lineGen,
+    options = { strokeWidth: 1, dashed: false }
+  ) {
+    const line = container
       .selectAll(`.Trend.--${cls}`)
       .data([data])
       .join("path")
       .attr("class", `Trend --${cls}`)
       .attr("stroke", strokeColor)
-      .attr("stroke-width", strokeWidth)
+      .attr("stroke-width", options.strokeWidth)
       .attr("fill", "none")
       .attr("d", (d) => lineGen(d));
+    if (options.dashed) line.attr("stroke-dasharray", "10,8");
+    return line;
   }
 
-  const meanTrend = renderLine("mean", "#333", meanLine, 3);
-  const minTrend = renderLine("min", "aqua", minLine);
-  const maxTrend = renderLine("max", "green", maxLine);
+  function renderArea(areaGen, fill) {
+    container
+      .selectAll(".Area")
+      .data([data])
+      .join("path")
+      .attr("d", areaGen)
+      .attr("fill", fill);
+  }
+
+  const aboveMean = renderArea(aboveMeanArea, "#ff08");
+  const belowMean = renderArea(belowMeanArea, "#ff08");
+
+  const meanTrend = renderLine("mean", "#333", meanLine, { strokeWidth: 3 });
+  const minTrend = renderLine("min", "#3333", minLine, { dashed: true });
+  const maxTrend = renderLine("max", "#3333", maxLine, { dashed: true });
 
   //-----------------------------
   // Axes
@@ -88,7 +116,7 @@ d3.csv("../../data/netflixByYear.csv", (d) => {
     .append("g")
     .attr("class", "Axis --x")
     .attr("transform", `translate(0, ${HEIGHT - MARGIN.BOTTOM})`)
-    .call(d3.axisBottom(xScale));
+    .call(d3.axisBottom(xScale).ticks(6));
 
   // Y Axis
   container
