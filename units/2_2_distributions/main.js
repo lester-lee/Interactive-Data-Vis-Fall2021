@@ -75,8 +75,6 @@ d3.csv("../../data/heart.csv", d3.autoType).then((data) => {
   //#region Axes
   //-----------------------------
 
-  //#endregion ------------------
-
   // X Axis
   container
     .append("g")
