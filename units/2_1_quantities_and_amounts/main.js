@@ -10,11 +10,9 @@ d3.csv("../../data/squirrelActivities.csv", d3.autoType).then((data) => {
   const counts = data.map((row) => row.count);
 
   // Main d3 container
-  const container = d3
-    .select("#svgChart")
-    .insert("svg", ":first-child")
+  const container = d3.select("#svgChart").insert("svg", ":first-child");
 
-  const WIDTH, HEIGHT = getDimensions(container);
+  const [WIDTH, HEIGHT] = getDimensions(container);
 
   // Calculate horizontal margins via y-axis
   const yScale = d3
@@ -35,7 +33,10 @@ d3.csv("../../data/squirrelActivities.csv", d3.autoType).then((data) => {
 
   // Use calculated margin to set x scale
   const xDomain = [0, Math.max(...counts) * 1.3];
-  const xScale = d3.scaleLinear().domain(xDomain).range([0, WIDTH-MARGIN]);
+  const xScale = d3
+    .scaleLinear()
+    .domain(xDomain)
+    .range([0, WIDTH - MARGIN]);
 
   // Creating the chart
   const bars = container
@@ -55,10 +56,10 @@ d3.csv("../../data/squirrelActivities.csv", d3.autoType).then((data) => {
     .attr("width", (bar) => xScale(bar.count))
     .attr("height", yScale.bandwidth());
 
-  console.log('xScale(0) :>> ', xScale(0));
-  counts.forEach(c => {
-    console.log('xScale(c) :>> ', c, xScale(c));
-  })
+  console.log("xScale(0) :>> ", xScale(0));
+  counts.forEach((c) => {
+    console.log("xScale(c) :>> ", c, xScale(c));
+  });
 
   // Add number label for each bar
   bars
