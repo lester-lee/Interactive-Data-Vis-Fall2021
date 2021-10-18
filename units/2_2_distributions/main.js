@@ -30,7 +30,7 @@ d3.csv("../../data/heart.csv", d3.autoType).then((data) => {
   const yScale = d3
     .scaleLinear()
     .domain(d3.extent(data, (d) => d.Cholesterol))
-    .range([HEIGHT - MARGIN, MARGIN])
+    .range([HEIGHT - MARGIN, 10])
     .nice();
 
   const sizeScale = d3

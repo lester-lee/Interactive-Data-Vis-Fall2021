@@ -3,6 +3,9 @@ layout: base
 includeStyle: true
 ---
 # Section 2.1 | Quantities and Amounts
+[Github link](https://github.com/lester-lee/Interactive-Data-Vis-Fall2021/tree/main/units/2_1_quantities_and_amounts)
+
+## Squirrel Activities
 
 <figure id="svgChart">
 <figcaption>

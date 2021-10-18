@@ -3,6 +3,9 @@ layout: base
 includeStyle: true
 ---
 # Section 2.2 | Distributions
+[Github link](https://github.com/lester-lee/Interactive-Data-Vis-Fall2021/tree/main/units/2_2_distributions)
+
+## Heart Failure
 <figure id="HeartViz">
 <figcaption>
 Scatterplot with resting blood pressure on the X axis against cholesterol on the Y axis. Red color indicates heart disease. Bigger circles correspond to greater maximum heart rates acheived.

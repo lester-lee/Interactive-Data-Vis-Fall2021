@@ -34,7 +34,7 @@ d3.csv("../../data/netflixByYear.csv", (d) => {
 
   const yScale = d3
     .scaleLinear()
-    .domain([40, 100])
+    .domain([50, 100])
     .range([HEIGHT - MARGIN.BOTTOM, MARGIN.TOP])
     .nice();
 
