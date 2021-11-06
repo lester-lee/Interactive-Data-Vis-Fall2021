@@ -1,11 +1,9 @@
 ---
 layout: base
-title: Posts
+title: Tutorials
 ---
-# Posts
-Links to all of my assignments can be found here.
-
-## Tutorials
+# Tutorials
+My work for the tutorial assignments can be accessed via the links below:
 
 <ul class="TutorialList">
 {% for tutorial in site.data.tutorials %}

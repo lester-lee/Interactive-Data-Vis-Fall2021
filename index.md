@@ -9,9 +9,4 @@ title: Lester Lee | DATA73200 Interactive Data Visualization
 
 Hi! I'm [Lester Lee](https://www.lester-lee.com), and this website hosts my work for [DATA73200: Interactive Data Visualization](https://gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Masters-Programs/Data-Analysis-and-Visualization), taught by [Ellie Frymire](http://elliefrymire.com/) in Fall 2021.
 
-## Links
-Below are links to my assignments and write-ups.
-  - [Assignments]({{site.baseurl}}/posts)
-  - [Github](https://github.com/lester-lee/Interactive-Data-Vis-Fall2021)
-
-I will update this home page as the semester continues.
+My code can be found on [Github](https://github.com/lester-lee/Interactive-Data-Vis-Fall2021).

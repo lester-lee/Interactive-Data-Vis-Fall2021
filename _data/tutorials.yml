@@ -12,13 +12,13 @@
   name: "2.3: Time Series"
 - link: 2_4_geographic
   name: "2.4: Geographic"
-- link: 3_1_quantities_and_amounts
-  name: "3.1: Quantities and Amounts"
-- link: 3_2_distributions
-  name: "3.2: Distributions"
-- link: 3_3_time_series
-  name: "3.3: Time Series"
-- link: 3_4_geographic
-  name: "3.4: Geographic"
-- link: 3_5_hierarchical
-  name: "3.5: Hierarchical"
+# - link: 3_1_quantities_and_amounts
+#   name: "3.1: Quantities and Amounts"
+# - link: 3_2_distributions
+#   name: "3.2: Distributions"
+# - link: 3_3_time_series
+#   name: "3.3: Time Series"
+# - link: 3_4_geographic
+#   name: "3.4: Geographic"
+# - link: 3_5_hierarchical
+#   name: "3.5: Hierarchical"
