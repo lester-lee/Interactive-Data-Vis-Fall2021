@@ -7,3 +7,4 @@ The cornerstone of this course is an individual data visualization project. Each
 ## Links
   - [Prospectus]({{site.baseurl}}/project/prospectus)
   - [Sketches]({{site.baseurl}}/project/sketches)
+  - [Plan]({{site.baseurl}}/project/plan)
