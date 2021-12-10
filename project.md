@@ -3,14 +3,31 @@ layout: base
 title: Project Portfolio
 ---
 # Project Portfolio
-![preview of the deployed project]()
-can be accessed here
+![preview of the deployed project]({{site.baseurl}}/lib/assets/preview.png)
+
+The visualization is deployed [here](https://www.lester-lee.com/student-standards-tracker).
 
 ## Abstract
-from prospectus
+This exploratory visualization allows educators to quickly see and evaluate student masteries of standards within a course. This tool can help plan and prepare for upcoming courses; less time can be spent on topics that students have shown proficiency in, and there can be more of an emphasis on standards that students have not yet met. The cumulative course information provides a quick overview of the overall performance of a class, while the individual student view allows educators to see student performance at a more granular level.
 
 ## Data
-Technical documentation sharing with the reader what data you used, where you found it (or how you generated it), and what analysis/manipulations (if any) you performed.
+The data for this visualization is organized into `csv` files, as follows:
+```
+data
+|-- courses.json
+`-- courses
+    |-- courseA
+    |   |-- roster.csv
+    |   |-- standards.csv
+    |   `-- students
+    |       |-- studentA.csv
+    |       `-- ... more students
+    `-- ... more courses
+```
+
+`courses.json` contains metadata for each course; it includes information such as the course title, rosters, domains, and standards, and is used to built the aggregate visualizations.
+
+Within `courses` is a directory for each course listed in `courses.json`; these directories contain information that is specific to the course, including a roster, a primary list of standards, and a directory of individual student information.
 
 ## Process
 sketches
@@ -33,3 +50,4 @@ Your reflection should be roughly 1,000-1,500 words, and reflect on any/all of  
   - [Prospectus]({{site.baseurl}}/project/prospectus)
   - [Sketches]({{site.baseurl}}/project/sketches)
   - [Plan]({{site.baseurl}}/project/plan)
+  - [Project](https://www.lester-lee.com/student-standards-tracker)
